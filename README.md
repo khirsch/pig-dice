@@ -1,10 +1,10 @@
-# Pig #
+# Oink-Oink #
 
 #### By Katrina Hirsch & Mark Lawson (August 24th, 2016)
 
 ## Description ##
 
-Pig is a two player game where players alternate rolling dice. JavaScript is used to simulate die rolls. For a more detailed information on the history of the game, visit the Wikipedia page [here](https://en.wikipedia.org/wiki/Pig_%28dice_game%29).
+Oink-Oink (commonly known as "Pig") is a two player game where players alternate rolling dice. JavaScript is used to simulate die rolls. For a more detailed information on the history of the game, visit the Wikipedia page [here](https://en.wikipedia.org/wiki/Pig_%28dice_game%29).
 
 ## Specifications ##
 
