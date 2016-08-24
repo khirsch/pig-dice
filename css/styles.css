@@ -42,7 +42,7 @@ ul {
 }
 
 .falling {
-  transform: translate(0, 800px) rotate(90deg);
+  transform: translate(0, 850px) rotate(90deg);
   transition: all 1s;
 }
 
