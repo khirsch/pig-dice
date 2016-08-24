@@ -43,8 +43,17 @@ ul {
 }
 
 .falling {
-  transform: translate(0, 850px) rotate(90deg);
+  transform: translate(0, 715px) rotate(90deg);
   transition: all 1s;
+}
+
+.rolling {
+  transform: rotate(180deg) translate(260px, -715px);
+  transition: all 1s;
+  /*-webkit-animation:spin 4s;
+  -moz-animation:spin 4s;
+  animation:spin 4s;*/
+  /**/
 }
 
 .player {
@@ -101,3 +110,7 @@ ul {
 #rollValue {
   margin-top: 80px;
 }
+
+/*@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }*/
