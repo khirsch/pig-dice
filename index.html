@@ -12,7 +12,7 @@
     <div class="container well">
       <h2 id="title">Oink <img src="img/pig.svg" alt="Pig" id="oink"> Oink</h2>
       <div class="row">
-        <div class="col-xs-3">
+        <div class="col-xs-3 col-xs-offset-1">
           <img src="img/dice.svg" alt="Rolling Die" id="die1">
           <div class="player" id="player1">
             <h2>Player 1</h2>
@@ -20,12 +20,9 @@
             <p class="score" id="score1">0</p>
           </div>
         </div>
-        <div class="col-xs-6">
-          <h1 class="offset" id="rollValue">&nbsp;</h1>
-          <p>Turn Total: <span id="turnTotal"></span></p>
-          <button class="btn" type="button" id="roll">Roll</button>
-          <button class="btn" type="button" id="hold">Hold</button>
-          <button class="btn" type="button" id="restart">Play Again</button>
+        <div class="col-xs-4">
+          <h1 id="rollValue">&nbsp;</h1>
+          <p>Turn Total: <span id="turnTotal">0</span></p>
         </div>
         <div class="col-xs-3">
           <img src="img/dice.svg" alt="Rolling Die" id="die2">
@@ -36,6 +33,8 @@
           </div>
         </div>
       </div>
+      <button class="btn" type="button" id="roll">Roll</button>
+      <button class="btn" type="button" id="hold">Hold</button>
       <div id="about">
         <hr>
         <h3>About Oink-Oink</h3>
@@ -45,9 +44,10 @@
           <li>If the player rolls a 1, they score nothing and it becomes the next player's turn.</li>
           <li>If the player rolls any other number, it is added to their turn total and the player's turn continues.</li>
           <li>If a player chooses to "hold", their turn total is added to their score, and it becomes the next player's turn.</li>
+          <li>The first player to score 100 or more points wins.</li>
         </ul>
-        <p>The first player to score 100 or more points wins.</p>
       </div>
+      <button class="btn" type="button" id="restart">Play Again</button>
     </div>
   </body>
 </html>

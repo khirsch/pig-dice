@@ -112,7 +112,7 @@ $(function() {
     $("#score1").text(player1.score);
     $("#score2").text(player2.score);
     $("#turnTotal").text(turnTotal);
-    $("#rollValue").text("");
+    $("#rollValue").html("&nbsp");
     $("#winner").text("");
     $("#die1").show();
     $("#die2").hide();
