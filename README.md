@@ -67,6 +67,7 @@ Please report any bugs or issues to katrina.hirsch@gmail.com or mlawson3691@gmai
 * jQuery
 * Atom
 * Chrome
+* [Flaticon](http://www.flaticon.com/)
 
 ### License ###
 
