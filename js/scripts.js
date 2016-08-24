@@ -1,4 +1,5 @@
 // business logic
+var turnTotal, game, player1, player2, winner;
 
 function Game(currentPlayer, gameOver) {
   this.currentPlayer = currentPlayer;
@@ -8,8 +9,6 @@ function Game(currentPlayer, gameOver) {
 function Player(score) {
   this.score = score;
 }
-
-var turnTotal, game, player1, player2, winner;
 
 function startGame() {
   player1 = new Player(0);
@@ -30,17 +29,14 @@ function endGame() {
 function endTurn() {
   game.currentPlayer.score += turnTotal;
   var currentScore = game.currentPlayer.score;
-
   if (game.currentPlayer === player1) {
     game.currentPlayer = player2;
   } else {
     game.currentPlayer = player1;
   }
-
   if (currentScore >= 100) {
     endGame();
   }
-
   turnTotal = 0;
   return currentScore;
 }
@@ -61,43 +57,37 @@ function roll() {
 $(function() {
   startGame();
 
-  $("#roll").click(function() {
-    var rollValue = roll();
-    $("#rollValue").text(rollValue);
-    $("#turnTotal").text(turnTotal);
-
-    if (rollValue === 1) {
-      if (game.currentPlayer === player2) {
-        $("#die1").hide();
-        $("#die2").show();
-        $("#player1").toggleClass("offset");
-        $("#player2").toggleClass("offset");
-      } else {
-        $("#die1").show();
-        $("#die2").hide();
-        $("#player1").toggleClass("offset");
-        $("#player2").toggleClass("offset");
-      }
-    }
-  });
-
-  $("#hold").click(function() {
-    var currentScore = endTurn();
-
+  function toggleDie() {
     if (game.currentPlayer === player2) {
-      $("#score1").text(currentScore);
       $("#die1").hide();
       $("#die2").show();
       $("#player1").toggleClass("offset");
       $("#player2").toggleClass("offset");
     } else {
-      $("#score2").text(currentScore);
       $("#die1").show();
       $("#die2").hide();
       $("#player1").toggleClass("offset");
       $("#player2").toggleClass("offset");
     }
+  }
 
+  $("#roll").click(function() {
+    var rollValue = roll();
+    $("#rollValue").text(rollValue);
+    $("#turnTotal").text(turnTotal);
+    if (rollValue === 1) {
+      toggleDie();
+    }
+  });
+
+  $("#hold").click(function() {
+    var currentScore = endTurn();
+    toggleDie();
+    if (game.currentPlayer === player2) {
+      $("#score1").text(currentScore);
+    } else {
+      $("#score2").text(currentScore);
+    }
     if (game.gameOver) {
       $("#rollValue").text(winner + " wins!");
       $("#die1").hide();
