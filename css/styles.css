@@ -3,26 +3,34 @@ body {
   background-color: #FFE9E9;
 }
 
-h2 {
-  font-weight: bold;
+ul {
+  text-align: left;
+}
+
+.row {
+  margin-top: 30px;
+  font-size: 1.25em;
 }
 
 .well {
   background-color: #ffffff;
   margin-top: 10%;
   border-radius: 15px;
-  width: 80%;
+  width: 60%;
+  min-width: 600px;
 }
 
 .btn {
-  background-color: #000000;
-  color: #FFE9E9;
+  background-color: #FFE9E9;
+  color: #000000;
+  border: 1px solid #000000;
   font-weight: bold;
+  margin-top: 15px;
 }
 
 .btn:focus {
   outline: none;
-  color: #FFE9E9;
+  color: #000000;
 }
 
 .btn:hover {
@@ -32,8 +40,17 @@ h2 {
 }
 
 .falling {
-  transform: translate(0, 500px) rotate(90deg);
+  transform: translate(0, 700px) rotate(90deg);
   transition: all 1s;
+}
+
+.player {
+  border: 1px dashed #000000;
+  border-radius: 15px;
+}
+
+#title {
+  font-weight: bold;
 }
 
 #oink {
@@ -42,16 +59,34 @@ h2 {
 }
 
 #die1 {
-  width: 10%;
+  width: 40px;
   height: auto;
+  margin-bottom: 10px;
 }
 
 #die2 {
   display: none;
-  width: 10%;
+  width: 40px;
   height: auto;
+  margin-bottom: 10px;
 }
 
-#rollValue {
-  margin-top: 30%;
+#about {
+  margin: 0 auto;
+  width: 70%;
+  text-align: left;
+  text-align: center;
+}
+
+#restart {
+  display: block;
+  margin: 4px auto;
+}
+
+#roll, #hold {
+  width: 60px;
+}
+
+.offset {
+  margin-top: 50px;
 }

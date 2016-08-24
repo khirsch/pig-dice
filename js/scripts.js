@@ -70,9 +70,13 @@ $(function() {
       if (game.currentPlayer === player2) {
         $("#die1").hide();
         $("#die2").show();
+        $("#player1").toggleClass("offset");
+        $("#player2").toggleClass("offset");
       } else {
         $("#die1").show();
         $("#die2").hide();
+        $("#player1").toggleClass("offset");
+        $("#player2").toggleClass("offset");
       }
     }
   });
@@ -84,16 +88,22 @@ $(function() {
       $("#score1").text(currentScore);
       $("#die1").hide();
       $("#die2").show();
+      $("#player1").toggleClass("offset");
+      $("#player2").toggleClass("offset");
     } else {
       $("#score2").text(currentScore);
       $("#die1").show();
       $("#die2").hide();
+      $("#player1").toggleClass("offset");
+      $("#player2").toggleClass("offset");
     }
 
     if (game.gameOver) {
-      $("#winner").text(winner + " wins!");
+      $("#rollValue").text(winner + " wins!");
       $("#die1").hide();
       $("#die2").hide();
+      $("#player1").addClass("offset");
+      $("#player2").addClass("offset");
     }
   });
 
@@ -105,6 +115,9 @@ $(function() {
     $("#rollValue").text("");
     $("#winner").text("");
     $("#die1").show();
+    $("#die2").hide();
+    $("#player1").removeClass("offset");
+    $("#player2").addClass("offset");
   });
 
   $("#oink").click(function() {
