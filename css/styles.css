@@ -1,8 +1,57 @@
 body {
   text-align: center;
+  background-color: #FFE9E9;
 }
 
-img {
+h2 {
+  font-weight: bold;
+}
+
+.well {
+  background-color: #ffffff;
+  margin-top: 10%;
+  border-radius: 15px;
+  width: 80%;
+}
+
+.btn {
+  background-color: #000000;
+  color: #FFE9E9;
+  font-weight: bold;
+}
+
+.btn:focus {
+  outline: none;
+  color: #FFE9E9;
+}
+
+.btn:hover {
+  background-color: #FFE9E9;
+  color: #000000;
+  border: 1px solid #000000;
+}
+
+.falling {
+  transform: translate(0, 500px) rotate(90deg);
+  transition: all 1s;
+}
+
+#oink {
   width: 10%;
   height: auto;
+}
+
+#die1 {
+  width: 10%;
+  height: auto;
+}
+
+#die2 {
+  display: none;
+  width: 10%;
+  height: auto;
+}
+
+#rollValue {
+  margin-top: 30%;
 }

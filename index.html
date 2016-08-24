@@ -9,16 +9,17 @@
     <title>Oink Oink</title>
   </head>
   <body>
-    <div class="container">
-      <h2>Oink <img src="img/pig.svg" alt="Pig"> Oink</h2>
+    <div class="container well">
+      <h2>Oink <img src="img/pig.svg" alt="Pig" id="oink"> Oink</h2>
       <div class="row">
         <div class="col-md-4">
           <h3>Player 1</h3>
           <p>Score:</p>
           <p class="score" id="score1">0</p>
+          <img src="img/dice.svg" alt="Rolling Die" id="die1">
         </div>
         <div class="col-md-4">
-          <h1 id="rollValue"></h1>
+          <h1 id="rollValue">&nbsp;</h1>
           <p>Turn Total: <span id="turnTotal"></span></p>
           <button class="btn" type="button" id="roll">Roll</button>
           <button class="btn" type="button" id="hold">Hold</button>
@@ -29,6 +30,7 @@
           <h3>Player 2</h3>
           <p>Score:</p>
           <p class="score" id="score2">0</p>
+          <img src="img/dice.svg" alt="Rolling Die" id="die2">
         </div>
       </div>
     </div>

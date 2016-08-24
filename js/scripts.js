@@ -33,8 +33,12 @@ function endTurn() {
 
   if (game.currentPlayer === player1) {
     game.currentPlayer = player2;
+    $("#die1").hide();
+    $("#die2").show();
   } else {
     game.currentPlayer = player1;
+    $("#die1").show();
+    $("#die2").hide();
   }
 
   if (currentScore >= 10) {
@@ -88,6 +92,10 @@ $(function() {
     $("#turnTotal").text(turnTotal);
     $("#rollValue").text("");
     $("#winner").text("");
+  });
+
+  $("#oink").click(function() {
+    $("#oink").toggleClass("falling");
   });
 
 });
