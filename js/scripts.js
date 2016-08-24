@@ -33,15 +33,11 @@ function endTurn() {
 
   if (game.currentPlayer === player1) {
     game.currentPlayer = player2;
-    $("#die1").hide();
-    $("#die2").show();
   } else {
     game.currentPlayer = player1;
-    $("#die1").show();
-    $("#die2").hide();
   }
 
-  if (currentScore >= 10) {
+  if (currentScore >= 100) {
     endGame();
   }
 
@@ -69,6 +65,16 @@ $(function() {
     var rollValue = roll();
     $("#rollValue").text(rollValue);
     $("#turnTotal").text(turnTotal);
+
+    if (rollValue === 1) {
+      if (game.currentPlayer === player2) {
+        $("#die1").hide();
+        $("#die2").show();
+      } else {
+        $("#die1").show();
+        $("#die2").hide();
+      }
+    }
   });
 
   $("#hold").click(function() {
@@ -76,12 +82,18 @@ $(function() {
 
     if (game.currentPlayer === player2) {
       $("#score1").text(currentScore);
+      $("#die1").hide();
+      $("#die2").show();
     } else {
       $("#score2").text(currentScore);
+      $("#die1").show();
+      $("#die2").hide();
     }
 
     if (game.gameOver) {
-      $("#winner").text(winner + " wins!")
+      $("#winner").text(winner + " wins!");
+      $("#die1").hide();
+      $("#die2").hide();
     }
   });
 
@@ -92,6 +104,7 @@ $(function() {
     $("#turnTotal").text(turnTotal);
     $("#rollValue").text("");
     $("#winner").text("");
+    $("#die1").show();
   });
 
   $("#oink").click(function() {
