@@ -2,11 +2,27 @@ body {
   text-align: center;
   background-color: #FFE9E9;
   background-image: url("../img/icon.png");
+  color: #000000;
 }
 
 ul {
   text-align: left;
   width: 95%;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #000000;
+}
+
+a:visited {
+  text-decoration: none;
+  color: #000000;
 }
 
 .row {
