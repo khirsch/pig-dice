@@ -110,9 +110,4 @@ $(function() {
     $("#player2").addClass("offset");
   });
 
-  $("#oink").click(function() {
-    $("#oink").toggleClass("falling");
-    var delay = setTimeout(function(){$("#oink").toggleClass("rolling");}, 1000);
-  });
-
 });
